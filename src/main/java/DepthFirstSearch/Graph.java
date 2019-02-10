@@ -1,4 +1,4 @@
-package DepthFirstSearch;
+package depthFirstSearch;
 
 import java.util.LinkedList;
 

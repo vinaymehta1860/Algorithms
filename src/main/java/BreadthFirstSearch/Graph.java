@@ -1,4 +1,4 @@
-package BreadthFirstSearch;
+package breadthFirstSearch;
 
 import java.util.LinkedList;
 
