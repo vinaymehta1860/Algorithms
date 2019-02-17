@@ -2,18 +2,27 @@ package test;
 
 import com.google.common.collect.ArrayListMultimap;
 import com.google.common.collect.ListMultimap;
-import java.util.ArrayList;
+import java.util.*;
 
 public class Trials {
 
 	public static void main(String[] args) {
-		ArrayList<Integer> list = new ArrayList<Integer>();
+		int cells[] = new int[8];
 		
-		list.add(1);
-		list.add(1);
-		list.add(1);
-		list.add(2);
+		cells[0] = 0;
+		cells[1] = 1;
+		cells[2] = 1;
+		cells[3] = 0;
+		cells[4] = 1;
+		cells[5] = 1;
+		cells[6] = 1;
+		cells[7] = 1;
 		
-		System.out.println(list);
+		int New[] = new int[cells.length];
+		New = cells;
+		
+		for(int i=0; i<New.length; i++ ) {
+			System.out.print(New[i] + " ");
+		}
 	}
 }
