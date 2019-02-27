@@ -2,7 +2,7 @@ package arrays;
 
 import java.util.Arrays;
 
-public class incrementLastDigit {
+public class incrementArray {
 
 	public static void main(String[] args) {
 		
