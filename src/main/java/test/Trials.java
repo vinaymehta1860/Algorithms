@@ -7,22 +7,61 @@ import java.util.*;
 public class Trials {
 
 	public static void main(String[] args) {
-		int cells[] = new int[8];
 		
-		cells[0] = 0;
-		cells[1] = 1;
-		cells[2] = 1;
-		cells[3] = 0;
-		cells[4] = 1;
-		cells[5] = 1;
-		cells[6] = 1;
-		cells[7] = 1;
+		int arr[] = new int[4];
 		
-		int New[] = new int[cells.length];
-		New = cells;
+		arr[0] = 0;
+		arr[1] = 0;
+		arr[2] = 0;
+		arr[3] = 0;
 		
-		for(int i=0; i<New.length; i++ ) {
-			System.out.print(New[i] + " ");
+		arr = incrementedArray(arr);
+		
+		for(int i= 0; i< arr.length; i++) {
+			System.out.print(arr[i]);
 		}
+	}
+	
+	public static int[] incrementedArray(int[] array) {
+		int copy[] = new int[array.length];
+		boolean carry = false;
+		
+		copy = Arrays.copyOf(array, array.length);
+		
+		for(int i = (array.length-1); i >= 0; i--) {
+			if(carry == true) {
+				if(copy[i] == 9) {
+					if(i==0) {
+						copy = newArray(array.length);
+						break;
+					}
+					copy[i] = 0;
+					carry = true;
+					continue;
+				}
+				else {
+					copy[i] += 1;
+					break;
+				}
+			}
+			
+			if(copy[i] != 9) {
+				copy[i] += 1;
+				break;
+			}
+			
+			copy[i] = 0;
+			carry = true;
+		}
+		
+		return copy;
+	}
+	
+	public static int[] newArray(int n) {
+		int result[] = new int[n+1];
+		
+		result[0] = 1;
+		
+		return result;
 	}
 }
