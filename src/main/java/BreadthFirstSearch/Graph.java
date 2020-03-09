@@ -16,11 +16,11 @@ public class Graph
 		}
 	}
 	
-	void addEdge(int s, int d) {
-		adj[s].add(d);
+	public void addEdge(int u, int v) {
+		adj[u].add(v);
 	}
-	
-	void BFS(int s) {
+
+	public void BFS(int s) {
 		System.out.println("BFS for " + s);
 		boolean visited[] = new boolean[nodes+1];
 		
@@ -32,7 +32,7 @@ public class Graph
 		while(queue.size() != 0) {
 			int u = queue.getFirst();
 			
-			System.out.println(u + " ");
+			System.out.print(u + ", ");
 			
 			for(int v : adj[u]) {
 				if(!visited[v]) {
@@ -64,6 +64,6 @@ public class Graph
     	graph.addEdge(6, 13);
     	graph.addEdge(6, 14);
     	
-    	graph.BFS(0);
+    	graph.BFS(1);
     }
 }

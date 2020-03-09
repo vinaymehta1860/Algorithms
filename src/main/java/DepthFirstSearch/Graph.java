@@ -19,8 +19,8 @@ public class Graph {
 		}
 	}
 	
-	void addEdge(int s, int d) {
-		adj[s].add(d);
+	void addEdge(int u, int v) {
+		adj[u].add(v);
 	}
 	
 	void DFS(int s) {
