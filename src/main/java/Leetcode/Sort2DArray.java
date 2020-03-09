@@ -21,7 +21,7 @@ public class Sort2DArray {
         intervals[3][1] = 7;
 
         // Function to sort an array based on the values of a particular column
-        sortArray(intervals, 1);
+         sortArray(intervals, 1);
 
         for(int i = 0; i < intervals.length; i++) {
             System.out.print(intervals[i][0] + " " + intervals[i][1]);
